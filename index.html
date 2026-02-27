@@ -3,84 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <!-- CSS link -->
+    <title>QuickClac</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="calculator">
+        <h2 class="title">QuickClac</h2>
 
-    <!-- HEADER / NAVBAR -->
-    <header>
-        <h1>Khushi Sarag</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<input type="text" id="display" readonly>
+<div class="buttons">
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="appendNumber('/')">/</button>
+    <button onclick="appendNumber('*')">*</button>
+    <button onclick="appendNumber('-')">-</button>
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="appendNumber('+')">+</button>
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="calculateResult()">=</button>
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="appendNumber('0')">0</button>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a student and aspiring web developer. 
-            I love learning new technologies and building projects.
-        </p>
-    </section>
+</div>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="projects-container">
-
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A personal portfolio website built using HTML, CSS and JavaScript.</p>
-        </div>
-
-        <div class="project-card">
-            <h3> Travel Image Gallery</h3>
-            <p>An image gallery with hover effects and clean layout.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>QuickCalc</h3>
-            <p>A calculator with hover effects and built with  HTML, CSS and JavaScript .</p>
-        </div>
-
-        <div class="project-card">
-            <h3>My Sketch Gallery</h3>
-            <p>A website i built from scratch using HTML and CSS combining my two passions:web development and sketching.</p>
-        </div>
-
-    </div>
-</section>
-
-
-    <!-- CONTACT SECTION -->
-   <section id="contact">
-    <h2>Contact Me</h2>
-
-    <p>Email: saragkhushi23@gmail.com</p>
-    <p>Phone: +91-XXXXXXXXXX</p>
-
-    <div class="social-links">
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">LinkedIn</a>
-    </div>
-
-    <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
-</section>
+</div>
+<script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,161 +1,117 @@
-/* Reset default spacing */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Body styling */
 body {
-    background-color: #f4f6f8;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header / Navbar */
-header {
-    background-color: #222;
-    color: white;
-    padding: 15px 40px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #eef2f3, #d9e4ec);
 }
 
-header h1 {
-    font-size: 24px;
+/* Calculator Card */
+.calculator {
+    width: 280px;
+    padding: 22px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
 }
 
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
+.calculator:hover {
+    transform: translateY(-3px);
 }
 
-nav a:hover {
-    color: #00bcd4;
-}
-
-/* Sections */
-section {
-    padding: 60px 40px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-section h2 {
-    font-size: 28px;
+/* Display */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 26px;
+    text-align: right;
+    padding: 12px;
     margin-bottom: 15px;
-    color: #222;
+    border: none;
+    border-radius: 10px;
+    background: #f1f3f6;
+    color: #333;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* About */
-#about p {
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Button Base */
+button {
+    height: 55px;
     font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Skills */
-#skills ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+/* Hover */
+button:hover {
+    background: #e6e6e6;
+    transform: translateY(-2px);
 }
 
-#skills li {
-    background: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Active press */
+button:active {
+    transform: scale(0.96);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Projects */
-#projects p {
-    font-size: 18px;
+/* Operators */
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8) {
+    background: #dbeafe;
+    color: #1e40af;
 }
 
-/* Contact */
-#contact p {
-    font-size: 18px;
+button:nth-child(2):hover,
+button:nth-child(3):hover,
+button:nth-child(4):hover,
+button:nth-child(8):hover {
+    background: #bfdbfe;
 }
 
-/* Hover animation */
-#skills li:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-/* Projects section */
-.projects-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+/* Equal Button */
+button:nth-child(12) {
+    background: #22c55e;
+    color: #ffffff;
 }
 
-.project-card {
-    background: white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+button:nth-child(12):hover {
+    background: #16a34a;
 }
 
-.project-card h3 {
-    margin-bottom: 10px;
-    color: #00bcd4;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-/* Contact Section */
-#contact {
-    text-align: center;
-}
-
-#contact p {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-/* Social links */
-.social-links {
-    margin: 20px 0;
-}
-
-.social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #00bcd4;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-/* Resume Button */
-.resume-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #00bcd4;
+/* Clear Button */
+button:first-child {
+    background: #ef4444;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
 }
 
-.resume-btn:hover {
-    background-color: #0097a7;
+button:first-child:hover {
+    background: #dc2626;
+}
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e293b;
+    letter-spacing: 1px;
 }
