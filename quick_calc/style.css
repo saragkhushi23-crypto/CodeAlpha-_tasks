@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #eef2f3, #d9e4ec);
+}
+
+/* Calculator Card */
+.calculator {
+    width: 280px;
+    padding: 22px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-3px);
+}
+
+/* Display */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 26px;
+    text-align: right;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #f1f3f6;
+    color: #333;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Button Base */
+button {
+    height: 55px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover */
+button:hover {
+    background: #e6e6e6;
+    transform: translateY(-2px);
+}
+
+/* Active press */
+button:active {
+    transform: scale(0.96);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Operators */
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8) {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+button:nth-child(2):hover,
+button:nth-child(3):hover,
+button:nth-child(4):hover,
+button:nth-child(8):hover {
+    background: #bfdbfe;
+}
+
+/* Equal Button */
+button:nth-child(12) {
+    background: #22c55e;
+    color: #ffffff;
+}
+
+button:nth-child(12):hover {
+    background: #16a34a;
+}
+
+/* Clear Button */
+button:first-child {
+    background: #ef4444;
+    color: white;
+}
+
+button:first-child:hover {
+    background: #dc2626;
+}
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e293b;
+    letter-spacing: 1px;
+}
