@@ -1,38 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Music Player</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="player">
-    <h2 id="title">Song Title</h2>
-    <h3 id="artist">Artist Name</h3>
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <h1>Khushi Sarag</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <audio id="audio"></audio>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a student and aspiring web developer. 
+            I love learning new technologies and building projects.
+        </p>
+    </section>
 
-    <!-- Progress bar -->
-    <input type="range" id="progress" value="0">
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
 
-    <!-- Time -->
-    <div class="time">
-      <span id="current">0:00</span>
-      <span id="duration">0:00</span>
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio website built using HTML, CSS and JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+            <h3> Travel Image Gallery</h3>
+            <p>An image gallery with hover effects and clean layout.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>QuickCalc</h3>
+            <p>A calculator with hover effects and built with  HTML, CSS and JavaScript .</p>
+        </div>
+
+        <div class="project-card">
+            <h3>My Sketch Gallery</h3>
+            <p>A website i built from scratch using HTML and CSS combining my two passions:web development and sketching.</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- CONTACT SECTION -->
+   <section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: saragkhushi23@gmail.com</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+
+    <div class="social-links">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
     </div>
 
-    <!-- Controls -->
-    <div class="controls">
-      <button id="prev">⏮</button>
-      <button id="play">▶</button>
-      <button id="next">⏭</button>
-    </div>
-
-    <!-- Volume -->
-    <input type="range" id="volume" min="0" max="1" step="0.01">
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+</section>
